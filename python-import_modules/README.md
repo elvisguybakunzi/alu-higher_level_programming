@@ -65,7 +65,7 @@ What you should learn from this project:
 
 
 ## **Author**
-* **Joseph Mahiuha** - [Mahiuha](https://github.com/Mahiuha)
+* **Elvis Guy Bakunzi** - [Elvis-Guy](https://github.com/elvisguybakunzi)
 
 
 ------
