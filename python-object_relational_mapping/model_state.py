@@ -1,16 +1,12 @@
 #!/usr/bin/python3
-'''
-    Using the SQL Alchemy in defining a database
-    states Database table
-'''
-
+'''class definition of a state'''
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 
 
 class State(Base):
-    '''A class defination of a table in the sql'''
+    '''class defination of a table'''
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
