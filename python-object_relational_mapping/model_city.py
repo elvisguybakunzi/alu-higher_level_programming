@@ -1,22 +1,15 @@
 #!/usr/bin/python3
-"""
-Class definition of a City
-"""
+'''Using the SQL Alchemy in defining a database class'''
 
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base
+Base = declarative_base()
 
 
 class City(Base):
-    """
-    City class that inherits from Base
+    '''A class defination of a table in the sql'''
+    __tablename__ = 'cities'
 
-    Attributes:
-        id: Id city
-        name: Name of the city
-        state_id: State id
-    """
-    __tablename__ = "cities"
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
