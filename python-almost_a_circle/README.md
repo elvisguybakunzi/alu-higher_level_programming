@@ -109,9 +109,6 @@ What you should learn from this project:
 
 ---
 
-## Author
-* **Joseph Mahiuha** - [Mahiuha](https://github.com/Mahiuha)
 
-------
 
 
