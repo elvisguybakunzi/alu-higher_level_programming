@@ -1,3 +1,4 @@
+#!/usr/bin/node
 /* a script that prints 3 lines  */
 
 const lineA = "C is fun";
