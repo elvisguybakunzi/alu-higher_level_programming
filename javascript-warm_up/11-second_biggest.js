@@ -5,7 +5,7 @@
 const args = process.argv.slice(2).map(Number);
 
 if (args.length <= 1) {
-	  console.log(0);
+  console.log(0);
 } else {
   let max = Number.MIN_SAFE_INTEGER;
   let secondMax = Number.MIN_SAFE_INTEGER;

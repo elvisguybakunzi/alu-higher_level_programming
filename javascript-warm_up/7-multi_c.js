@@ -9,6 +9,8 @@ if (!isNaN(numOccurrences) && numOccurrences > 0) {
   for (let i = 0; i < numOccurrences; i++) {
     console.log('C is fun');
   }
+} else if (!isNaN(numOccurrences) && numOccurrences < 0) {
+    
 } else {
   console.log('Missing number of occurrences');
 }
