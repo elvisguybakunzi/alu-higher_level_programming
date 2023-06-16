@@ -1,16 +1,17 @@
 #!/usr/bin/node
 
 /*   a script that concats 2 files.  */
-
 const fs = require('fs');
 
-const fileAPath = process.argv[2];
-const fileBPath = process.argv[3];
-const destinationPath = process.argv[4];
+function concatFiles (file1, file2, destination) {
+  const content1 = fs.readFileSync(file1, 'utf-8');
+  const content2 = fs.readFileSync(file2, 'utf-8');
+  const concatenatedContent = content1 + '\n' + content2;
+  fs.writeFileSync(destination, concatenatedContent);
+}
 
-const fileAContent = fs.readFileSync(fileAPath, 'utf8');
-const fileBContent = fs.readFileSync(fileBPath, 'utf8');
+const file1 = process.argv[2];
+const file2 = process.argv[3];
+const destination = process.argv[4];
 
-const concatenatedContent = fileAContent + '\n' + fileBContent;
-
-fs.writeFileSync(destinationPath, concatenatedContent);
+concatFiles(file1, file2, destination);
