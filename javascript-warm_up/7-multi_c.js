@@ -2,13 +2,14 @@
 
 /* Write a script that prints x times “C is fun”  */
 
-const arg = process.argv[2];
-const numOccurrences = parseInt(arg);
+const argemnt = process.argv[2];
 
-if (!isNaN(numOccurrences) && numOccurrences > 0) {
-	  for (let i = 0; i < numOccurrences; i++) {
-		      console.log('C is fun');
-		    }
+if (!argemnt || isNaN(arg)) {
+  console.log('Missing number of occurrences');
 } else {
-	  console.log('Missing number of occurrences');
+  const numberOccurrences = parseInt(arg);
+
+  for (let i = 0; i < numberOccurrences; i++) {
+    console.log('C is fun');
+  }
 }
