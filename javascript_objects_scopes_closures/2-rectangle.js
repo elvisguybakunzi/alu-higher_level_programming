@@ -2,7 +2,6 @@
 
 /*  Write a class Rectangle that defines a rectangle:  */
 
-
 module.exports = class Rectangle {
   constructor (width, height) {
     if (typeof width === 'number' && typeof height === 'number' && width > 0 && height > 0) {
