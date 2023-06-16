@@ -4,12 +4,7 @@
 
 const request = require('request');
 
-const movieId = process.argv[2];
-const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
-
-const request = require('request');
-
-function getDataFrom (url) {
+function getDataFrom(url) {
   return new Promise(function (resolve, reject) {
     request(url, function (err, _res, body) {
       if (err) {
@@ -21,15 +16,11 @@ function getDataFrom (url) {
   });
 }
 
-function errHandler (err) {
-  console.log(err);
-}
-
-function printMovieCharacters (movieId) {
-  const movieUri = `https://swapi-api.hbtn.io/api/films/${movieId}`;
+function printMovieCharacters(movieId) {
+  const movieUri = `https://swapi.dev/api/films/${movieId}/`;
 
   getDataFrom(movieUri)
-    .then(JSON.parse, errHandler)
+    .then(JSON.parse)
     .then(function (res) {
       const characters = res.characters;
       const promises = [];
@@ -41,12 +32,16 @@ function printMovieCharacters (movieId) {
       Promise.all(promises)
         .then((results) => {
           for (let i = 0; i < results.length; ++i) {
-            console.log(JSON.parse(results[i]).name);
+            const character = JSON.parse(results[i]);
+            console.log(character.name);
           }
         })
         .catch((err) => {
           console.log(err);
         });
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 
