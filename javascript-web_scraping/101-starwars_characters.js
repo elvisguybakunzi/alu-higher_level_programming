@@ -4,7 +4,7 @@
 
 const request = require('request');
 
-function getDataFrom(url) {
+function getDataFrom (url) {
   return new Promise(function (resolve, reject) {
     request(url, function (err, _res, body) {
       if (err) {
@@ -16,7 +16,7 @@ function getDataFrom(url) {
   });
 }
 
-function printMovieCharacters(movieId) {
+function printMovieCharacters (movieId) {
   const movieUri = `https://swapi.dev/api/films/${movieId}/`;
 
   getDataFrom(movieUri)
